@@ -7,9 +7,9 @@ body {
   border-color: #9F9A04;
   border-radius: 15px;
   padding: 30px;
-  display: flex;
-  flex-direction: column;
-  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
 }
 
 .container #happy {
@@ -18,7 +18,7 @@ body {
   font-size: 30px;
   border-radius: 10px;
   padding: 40px;
-  width: 50%;
+  margin: 40px;
 }
 
 .container #sad {
@@ -27,7 +27,7 @@ body {
   font-size: 30px;
   border-radius: 10px;
   padding: 40px;
-  width: 50%;
+  margin: 40px;
 }
 
 .container #mid {
@@ -36,7 +36,7 @@ body {
   font-size: 30px;
   border-radius: 10px;
   padding: 40px;
-  width: 50%;
+  margin: 40px;
 }
 
 .container #idk {
@@ -45,14 +45,15 @@ body {
   font-size: 30px;
   border-radius: 10px;
   padding: 40px;
-  width: 50%;
+  margin: 40px;
 }
 
 button {
   transition: transform 0.3s ease;
-  
+
 }
 
 button:hover {
   transform: scale(1.05);
 }
+
