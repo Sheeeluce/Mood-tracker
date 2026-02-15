@@ -3,9 +3,19 @@ body {
 }
 
 .container {
-  background-color: #FAF33E; 
+  background-color: #E0FF4F; 
   border-color: #9F9A04;
   border-radius: 15px;
   padding: 30px;
   display: flex;
+  flex-direction: column;
+}
+
+.container #happy {
+  background-color: #FF82A9;
+  border-color: #FF0A58;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 40px;
+  width: 50%;
 }
