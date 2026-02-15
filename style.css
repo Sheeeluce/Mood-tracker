@@ -3,12 +3,13 @@ body {
 }
 
 .container {
-  background-color: #E0FF4F; 
+  background-color: #dfff4f70; 
   border-color: #9F9A04;
   border-radius: 15px;
   padding: 30px;
   display: flex;
   flex-direction: column;
+  
 }
 
 .container #happy {
@@ -18,4 +19,40 @@ body {
   border-radius: 10px;
   padding: 40px;
   width: 50%;
+}
+
+.container #sad {
+  background-color: #7F95D1;
+  border-color: #3f4a69;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 40px;
+  width: 50%;
+}
+
+.container #mid {
+  background-color: #C2C5BB;
+  border-color: #61635e;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 40px;
+  width: 50%;
+}
+
+.container #idk {
+  background-color: #AF125A;
+  border-color: #FF0A58;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 40px;
+  width: 50%;
+}
+
+button {
+  transition: transform 0.3s ease;
+  
+}
+
+button:hover {
+  transform: scale(1.05);
 }
