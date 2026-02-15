@@ -72,7 +72,7 @@ h3 {
   transform: translate(-50%, -50%);
   background: white;
   padding: 25px;
-  width: 300px;
+  width: 40%;
   text-align: center;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -85,4 +85,8 @@ h3 {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+p {
+  font-size: large;
 }

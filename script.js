@@ -46,4 +46,29 @@ closeIdk.addEventListener("click", () => {
   popIdk.classList.add("hidden");
 }); 
 
+function saveHappy() {
+  const feelGood = document.getElementById("feelGood").value;
+  const pride = document.getElementById("proud").value;
+  const personalityTrait = document.getElementById("personality").value;
+
+  const entry = {
+    feel: feelGood,
+    proudOf: pride,
+    personality: personalityTrait,
+    date: new Date().toLocaleString()
+  };
+
+  let entries = JSON.parse(localStorage.getItem(moodEntries)) || [];
+
+  entries.push(entry);
+
+  localStorage.setItem("moodEntries", JSON.stringify(entries));
+
+  displayEntries();
+};
+
+function displayEntries() {
+  const container = document.getElementById("entries"); 
+}
+
 

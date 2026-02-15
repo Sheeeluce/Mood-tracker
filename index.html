@@ -27,11 +27,11 @@
 
 <div class="popup hidden" id="promptPopup">
   <p>What made today feel good?</p>
-  <input type="text">
+  <input type="text" id="feelGood" placeholder="What made me feel good was...">
   <p>What’s one small win I’m proud of?</p>
-  <input type="text">
+  <input type="text" id="proud" placeholder="I'm proud of...">
   <p>What version of me showed up today?</p>
-  <input type="text">
+  <input type="text" id="personality" placeholder="this version showed up...">
    <button id="closePopUp">Okay</button>
 </div>
 
@@ -55,6 +55,9 @@
    <button id="closeIdk">Okay</button>
 </div>
 
+<div class="displayEntries" id="entries">
+  <!--Entries appear here-->
+</div>
 
 <script src="script.js"></script>
 </body>
