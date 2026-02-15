@@ -1,0 +1,11 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  background-color: #FAF33E; 
+  border-color: #9F9A04;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+}
