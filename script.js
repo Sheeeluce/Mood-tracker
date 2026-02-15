@@ -9,3 +9,16 @@ sadBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   popup.classList.add("hidden");
 });
+
+const happyBtn = document.getElementById("happy");
+const popUp = document.getElementById("promptPopup");
+const closebtn = document.getElementById("closePopUp");
+
+happyBtn.addEventListener("click", () => {
+  popUp.classList.remove("hidden");
+});
+
+closebtn.addEventListener("click", () => {
+  popUp.classList.add("hidden");
+}); 
+
