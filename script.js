@@ -120,22 +120,24 @@ function displayMidEntries() {
   const entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
   entries.forEach(entry => {
     if (entry.mood !== "Mid😐") return;
-    const card = document.createElement("div");
-    card.classList.add("cardMid");
-    card.innerHTML = `
+    const cardMid = document.createElement("div");
+    cardMid.classList.add("cardMid");
+    cardMid.innerHTML = `
       <h3>${entry.mood}</h3>
       <h4>What feels off: ${entry.feel}</h4>
       <h4>Bored/tired/avoiding: ${entry.proudOf}</h4>
       <h4>What would make today better: ${entry.personality}</h4>
       <p>${entry.date}</p>
     `;
-    container.appendChild(card);
+    container.appendChild(cardMid);
   });
 }
 
 document.getElementById("close").addEventListener("click", saveMid);
+window.addEventListener("load",displayMidEntries);
 
-function saveIDK() {
+
+function saveIdk() {
   const feeling = document.getElementById("feeling").value;
   const trigger = document.getElementById("trigger").value;
   const makebetter = document.getElementById("makebetter").value;
@@ -161,20 +163,21 @@ function displayIDKEntries() {
   const entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
   entries.forEach(entry => {
     if (entry.mood !== "IDK🤔") return;
-    const card = document.createElement("div");
-    card.classList.add("cardIDK");
-    card.innerHTML = `
+    const cardIdk = document.createElement("div");
+    cardIdk.classList.add("cardIdk");
+    cardIdk.innerHTML = `
       <h3>${entry.mood}</h3>
       <h4>Feeling: ${entry.feel}</h4>
       <h4>Trigger: ${entry.proudOf}</h4>
       <h4>Make today better: ${entry.personality}</h4>
       <p>${entry.date}</p>
     `;
-    container.appendChild(card);
+    container.appendChild(cardIdk);
   });
 }
 
 document.getElementById("closeIdk").addEventListener("click", saveIdk);
+window.addEventListener("load",displayIDKEntries);
 
 
 
