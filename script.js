@@ -19,6 +19,7 @@ happyBtn.addEventListener("click", () => {
 });
 
 closebtn.addEventListener("click", () => {
+  saveHappy();
   popUp.classList.add("hidden");
 }); 
 
@@ -52,13 +53,14 @@ function saveHappy() {
   const personalityTrait = document.getElementById("personality").value;
 
   const entry = {
+    mood: "Happy😄",
     feel: feelGood,
     proudOf: pride,
     personality: personalityTrait,
     date: new Date().toLocaleString()
   };
 
-  let entries = JSON.parse(localStorage.getItem(moodEntries)) || [];
+  let entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
 
   entries.push(entry);
 
@@ -69,6 +71,25 @@ function saveHappy() {
 
 function displayEntries() {
   const container = document.getElementById("entries"); 
+  container.innerHTML = "";
+
+  const entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
+
+  entries.forEach((entry) => {
+    const cardHappy = document.createElement("div");
+    cardHappy.classList.add("cardHappy");
+
+    cardHappy.innerHTML = `
+    <h3>${entry.mood}</h3>
+    <h4>How I'm feeling today:${entry.feel}</h4>
+    <h4>i'm proud of:${entry.proudOf}</h4>
+    <h4>My personality today:${entry.personality}</h4>
+    <p>${entry.date}</p>
+    `;
+    container.appendChild(cardHappy);
+  });
 }
+
+window.addEventListener("load",displayEntries);
 
 

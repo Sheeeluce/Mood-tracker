@@ -90,3 +90,36 @@ h3 {
 p {
   font-size: large;
 }
+
+nav {
+  background: #4c1f5e;
+  color: #fff;
+  padding: 20px 0;
+  margin: 15px;
+}
+
+nav ul {
+  list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+  color: #fff;
+  border: #1b1e42;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-style: italic;
+}
+
+nav ul li a:hover {
+  background: #7a3688;
+  border-radius: 2px;
+}

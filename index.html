@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="moods.html">My moods</a></li>
+    <li><a href="about.html">About moods.</a></li>
+    </ul>
+  </nav>
   <h3>How are you feeling today?😊</h3>
  
 <div class="container">
@@ -26,37 +33,33 @@
 </div>
 
 <div class="popup hidden" id="promptPopup">
-  <p>What made today feel good?</p>
+  <label>What made today feel good?</label>
   <input type="text" id="feelGood" placeholder="What made me feel good was...">
-  <p>What’s one small win I’m proud of?</p>
+  <label>What’s one small win I’m proud of?</label>
   <input type="text" id="proud" placeholder="I'm proud of...">
-  <p>What version of me showed up today?</p>
+  <label>What version of me showed up today?</label>
   <input type="text" id="personality" placeholder="this version showed up...">
    <button id="closePopUp">Okay</button>
 </div>
 
 <div class="popup hidden" id="midPopup">
-  <p>What feels “off” but not dramatic?</p>
+  <label>What feels “off” but not dramatic?</label>
   <input type="text">
-  <p>Am I bored, tired, or avoiding something?</p>
+  <label>Am I bored, tired, or avoiding something?</label>
   <input type="text">
-  <p>What would make today 10% better?</p>
+  <label>What would make today 10% better?</label>
   <input type="text">
    <button id="close">Okay</button>
 </div>
 
 <div class="popup hidden" id="idkPopup">
-  <p>What am I actually feeling? (Name 3 possibilities.)</p>
+  <label>What am I actually feeling? (Name 3 possibilities.)</label>
   <input type="text">
-  <p>Did something small trigger this?Explain.</p>
+  <label>Did something small trigger this?Explain.</label>
   <input type="text">
-  <p>What would make today 10% better?</p>
+  <label>What would make today 10% better?</label>
   <input type="text">
    <button id="closeIdk">Okay</button>
-</div>
-
-<div class="displayEntries" id="entries">
-  <!--Entries appear here-->
 </div>
 
 <script src="script.js"></script>
