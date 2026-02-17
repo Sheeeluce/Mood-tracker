@@ -33,18 +33,18 @@
 </div>
 
 <div class="popup hidden" id="promptPopup">
-  <label>What made today feel good?</label>
+  <label for="feelGood">What made today feel good?</label>
   <input type="text" id="feelGood" placeholder="What made me feel good was...">
-  <label>What’s one small win I’m proud of?</label>
+  <label for="proud">What’s one small win I’m proud of?</label>
   <input type="text" id="proud" placeholder="I'm proud of...">
-  <label>What version of me showed up today?</label>
+  <label for="personality">What version of me showed up today?</label>
   <input type="text" id="personality" placeholder="this version showed up...">
    <button id="closePopUp">Okay</button>
 </div>
 
 <div class="popup hidden" id="midPopup">
-  <label>What feels “off” but not dramatic?</label>
-  <input type="text">
+  <label for="">What feels “off” but not dramatic?</label>
+  <input type="text" id="dramatic">
   <label>Am I bored, tired, or avoiding something?</label>
   <input type="text">
   <label>What would make today 10% better?</label>
@@ -61,6 +61,10 @@
   <input type="text">
    <button id="closeIdk">Okay</button>
 </div>
+
+<div id="entries">
+  <!--Entries appear here-->
+  </div>
 
 <script src="script.js"></script>
 </body>
