@@ -176,7 +176,7 @@ function displayIDKEntries() {
   });
 }
 
-document.getElementById("closeIdk").addEventListener("click", saveIdk);
+document.getElementById("closeIdk").addEventListener("click");
 window.addEventListener("load",displayIDKEntries);
 
 
