@@ -32,6 +32,7 @@ midBtn.addEventListener("click", () => {
 });
 
 close.addEventListener("click", () => {
+  saveMid();
   pop.classList.add("hidden");
 }); 
 
@@ -44,6 +45,7 @@ idkBtn.addEventListener("click", () => {
 });
 
 closeIdk.addEventListener("click", () => {
+  saveIdk();
   popIdk.classList.add("hidden");
 }); 
 
@@ -91,6 +93,89 @@ function displayEntries() {
 }
 
 window.addEventListener("load",displayEntries);
+
+function saveMid() {
+  const dramatic = document.getElementById("dramatic").value;
+  const bored = document.getElementById("bored").value;
+  const better = document.getElementById("better").value;
+
+  const entry = {
+    mood: "Mid😐",
+    feel: dramatic,
+    proudOf: bored,
+    personality: better,
+    date: new Date().toLocaleString()
+  };
+
+  let entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
+  entries.push(entry);
+  localStorage.setItem("moodEntries", JSON.stringify(entries));
+  displayMidEntries();
+}
+
+function displayMidEntries() {
+  const container = document.getElementById("entries"); 
+  container.innerHTML = "";
+
+  const entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
+  entries.forEach(entry => {
+    if (entry.mood !== "Mid😐") return;
+    const card = document.createElement("div");
+    card.classList.add("cardMid");
+    card.innerHTML = `
+      <h3>${entry.mood}</h3>
+      <h4>What feels off: ${entry.feel}</h4>
+      <h4>Bored/tired/avoiding: ${entry.proudOf}</h4>
+      <h4>What would make today better: ${entry.personality}</h4>
+      <p>${entry.date}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+document.getElementById("close").addEventListener("click", saveMid);
+
+function saveIDK() {
+  const feeling = document.getElementById("feeling").value;
+  const trigger = document.getElementById("trigger").value;
+  const makebetter = document.getElementById("makebetter").value;
+
+  const entry = {
+    mood: "IDK🤔",
+    feel: feeling,
+    proudOf: trigger,
+    personality: makebetter,
+    date: new Date().toLocaleString()
+  };
+
+  let entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
+  entries.push(entry);
+  localStorage.setItem("moodEntries", JSON.stringify(entries));
+  displayIDKEntries();
+}
+
+function displayIDKEntries() {
+  const container = document.getElementById("entries"); 
+  container.innerHTML = "";
+
+  const entries = JSON.parse(localStorage.getItem("moodEntries")) || [];
+  entries.forEach(entry => {
+    if (entry.mood !== "IDK🤔") return;
+    const card = document.createElement("div");
+    card.classList.add("cardIDK");
+    card.innerHTML = `
+      <h3>${entry.mood}</h3>
+      <h4>Feeling: ${entry.feel}</h4>
+      <h4>Trigger: ${entry.proudOf}</h4>
+      <h4>Make today better: ${entry.personality}</h4>
+      <p>${entry.date}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+document.getElementById("closeIdk").addEventListener("click", saveIdk);
+
 
 
 
