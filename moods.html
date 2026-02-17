@@ -3,8 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My moods</title>
-  <link rel="stylesheet" href="style.css">
+  <title>🌈 My Mood Guide</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f6;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff6f91;
+    }
+
+    .mood-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+      transition: transform 0.2s;
+    }
+
+    .mood-card:hover {
+      transform: scale(1.05);
+    }
+
+    .mood-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mood-desc {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .happy {
+      border-left: 5px solid #ffdd57;
+    }
+
+    .mid {
+      border-left: 5px solid #a3a3a3;
+    }
+
+    .idk {
+      border-left: 5px solid #9b59b6;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -15,8 +68,36 @@
     </ul>
   </nav>
   <hr>
+  <h1>🌸 Mood Guide</h1>
 
+  <div class="mood-card happy">
+    <div class="mood-title">Happy 😄</div>
+    <p class="mood-desc">
+      Feeling light, sparkly, and proud of little wins! Today’s you is shining bright ✨  
+      Maybe you laughed at a silly meme, nailed a tiny goal, or just vibing with yourself.  
+      Capture that joy and let it bloom 🌼
+    </p>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="mood-card mid">
+    <div class="mood-title">Mid 😐</div>
+    <p class="mood-desc">
+      Meh vibes… not terrible, not amazing. Just kinda “eh.”  
+      You might be bored, tired, or distracted by small annoyances.  
+      That’s okay! Notice it, take a deep breath, and think about one tiny thing that could nudge today up 10% 💫
+    </p>
+  </div>
+
+  <div class="mood-card idk">
+    <div class="mood-title">IDK 🤔</div>
+    <p class="mood-desc">
+      Confused or all-over-the-place feels. Can’t quite name it? That’s normal 😌  
+      List three feelings, see if a small trigger popped up, and brainstorm one little tweak that could help.  
+      Today’s a puzzle, and you’re the cleverest solver 🧩
+    </p>
+  </div>
 </body>
 </html>
+
+
+ 
