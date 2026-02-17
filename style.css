@@ -183,3 +183,11 @@ input {
   outline: none;
 }
 
+@media 
+  (max-width: 480px) {
+  .place-card {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+}
+
